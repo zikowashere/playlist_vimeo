@@ -1,0 +1,21 @@
+{% extends '/base.html.twig' %}
+
+{% form_theme formUser 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+
+    <h1> Inscription </h1>
+
+    {{ form_start(formUser) }}
+
+    {{ form_row(formUser.Firstname,{'attr':{'placeholder':"Firstname"}} )}}
+    {{ form_row(formUser.Lastname,{'attr':{'placeholder':"Lastname"}} )}}
+    {{ form_row(formUser.email,{'attr':{'placeholder':"email"}} )}}
+    {{ form_row(formUser.password,{'attr':{'placeholder':"password" }} )}}
+
+    <button type="Submit" class="btn btn-primary">Inscription</button>
+
+
+    {{ form_end(formUser) }}
+    {% endblock %}

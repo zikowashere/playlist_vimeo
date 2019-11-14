@@ -1,0 +1,18 @@
+{% extends '/base.html.twig' %}
+{% form_theme formVideo 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+
+    <h1> Bienvenu a votre section video </h1>
+
+    {{ form_start(formVideo) }}
+    {{ form_row(formVideo.titre,{'attr':{'placeholder':"titre"}} )}}
+    {{ form_row(formVideo.chemin,{'attr':{'placeholder':"lien"}} )}}
+
+
+    <button type="Submit" class="btn btn-primary">ajouterVideo</button>
+
+    {{ form_end(formVideo) }}
+
+{% endblock %}

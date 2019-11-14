@@ -1,0 +1,16 @@
+{% extends '/base.html.twig' %}
+{% form_theme formPlayList 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+
+    <h1> Bienvenu a votre section playlist </h1>
+
+    {{ form_start(formPlayList) }}
+    {{ form_row(formPlayList.titre,{'attr':{'placeholder':"titre"}} )}}
+    <a href="{{path('show',{'id':app.user.id}) }}" class="btn btn-primary" role="button">afficherplaylist</a>
+
+    <button type="Submit" class="btn btn-primary">ajouterPlayList</button>
+    {{ form_end(formPlayList) }}
+
+{% endblock %}

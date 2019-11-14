@@ -1,0 +1,31 @@
+{% extends '/base.html.twig' %}
+{% block body %}
+
+    {% for ensemblevid in EnsembleVideo %}
+        <!-- Card -->
+        <div class="card">
+
+            <!-- Card image -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/{{ ensemblevid.chemin }}" allowfullscreen></iframe>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title"><a> {{ ensemblevid.titre }}</a></h4>
+                <!-- Text -->
+
+
+
+            </div>
+
+        </div>
+        <!-- Card -->
+
+
+    {% endfor %}
+
+
+{% endblock %}
